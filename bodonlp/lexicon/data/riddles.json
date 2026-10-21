@@ -1,0 +1,37 @@
+[
+  {
+    "question": "आं जाखाङोब्ला बारायलांगो, आं लोंखाङोब्ला थैयो। आं सोर?",
+    "roman": "Ang jakhangobla barailango, ang lwngkhangobla thwiyo. Ang swr?",
+    "english": "If I eat I grow, if I drink I die. Who am I?",
+    "answer": "अर (Or / Fire)",
+    "hint": "Element of nature"
+  },
+  {
+    "question": "आं गाबनो हायो आथिं गैयाबालानो, आं बिरनो हायो गां गैयाबालानो। आं सोर?",
+    "roman": "Ang gabnw hayo athing gwyabalano, ang birnw hayo gang gwyabalano. Ang swr?",
+    "english": "I can weep without eyes, and I can fly without wings. Who am I?",
+    "answer": "जोमैल' (Jwmoilw / Cloud)",
+    "hint": "In the sky"
+  },
+  {
+    "question": "खुलिब्ला न' गासै सिङाव, बन्द खालामब्ला लाथायाव। आं सोर?",
+    "roman": "Khulibla no gaswi singao, bondo khalambla lathayao. Ang swr?",
+    "english": "When opened it shelters the whole body, when closed it fits in the hand. Who am I?",
+    "answer": "साथा (Satha / Umbrella)",
+    "hint": "Everyday object"
+  },
+  {
+    "question": "सानदुंआव दाउबायो, ओखायाव गोमोयो। आं सोर?",
+    "roman": "Sandungao daubayo, okha-yao gwmwyo. Ang swr?",
+    "english": "Accompanies you in the sunlight, disappears in the rain. Who am I?",
+    "answer": "साया (Saya / Shadow)",
+    "hint": "Always follows you"
+  },
+  {
+    "question": "गावहा आथिं गंनै, जाबग्रा खुगा गंनै, बियो मानसिबो नङा जुनारबो नङा। बियो मा?",
+    "roman": "Gaoha athing gwngnwi, jabgra khuga gwngnwi, biyw mansibo nonga junarbo nonga. Biyw ma?",
+    "english": "It has two legs and two biting mouths, but it is neither human nor animal. What is it?",
+    "answer": "खासि / खास्रि (Khasi / Scissors)",
+    "hint": "Household cutting tool"
+  }
+]

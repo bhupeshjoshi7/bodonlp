@@ -1,0 +1,177 @@
+[
+  {
+    "bodo": "खुलुमबाय",
+    "roman": "Khulumbai",
+    "english": "Hello / Greetings",
+    "hindi": "नमस्ते",
+    "category": "greetings"
+  },
+  {
+    "bodo": "मा खबर?",
+    "roman": "Ma khobor?",
+    "english": "How are you? (What is the news?)",
+    "hindi": "क्या हाल है?",
+    "category": "greetings"
+  },
+  {
+    "bodo": "मोजां, नोंहा मा खबर?",
+    "roman": "Mwjang, nwngha ma khobor?",
+    "english": "Fine, how are you?",
+    "hindi": "अच्छा हूँ, आपका क्या हाल है?",
+    "category": "greetings"
+  },
+  {
+    "bodo": "आं मोजाङैनो दं",
+    "roman": "Ang mwjangwinw dwng",
+    "english": "I am fine",
+    "hindi": "मैं ठीक हूँ",
+    "category": "greetings"
+  },
+  {
+    "bodo": "नोंनि मुंआ मा?",
+    "roman": "Nwngni munga ma?",
+    "english": "What is your name?",
+    "hindi": "तुम्हारा नाम क्या है?",
+    "category": "introduction"
+  },
+  {
+    "bodo": "आंनि मुंआ...",
+    "roman": "Angni munga...",
+    "english": "My name is...",
+    "hindi": "मेरा नाम... है",
+    "category": "introduction"
+  },
+  {
+    "bodo": "नों मा खालामदों?",
+    "roman": "Nwng ma khalamdwng?",
+    "english": "What are you doing?",
+    "hindi": "तुम क्या कर रहे हो?",
+    "category": "conversation"
+  },
+  {
+    "bodo": "आं हाबा मावदों",
+    "roman": "Ang haba maowdwng",
+    "english": "I am working",
+    "hindi": "मैं काम कर रहा हूँ",
+    "category": "conversation"
+  },
+  {
+    "bodo": "नों बबेयाव थांगोन?",
+    "roman": "Nwng bwbeyao thang-gwn?",
+    "english": "Where will you go?",
+    "hindi": "तुम कहाँ जाओगे?",
+    "category": "travel"
+  },
+  {
+    "bodo": "आं न'आव थांगोन",
+    "roman": "Ang noao thang-gwn",
+    "english": "I will go home",
+    "hindi": "मैं घर जाऊंगा",
+    "category": "travel"
+  },
+  {
+    "bodo": "गोजोन फुंबिलि!",
+    "roman": "Gwjwn fungbili!",
+    "english": "Good morning!",
+    "hindi": "शुभ प्रभात!",
+    "category": "wishes"
+  },
+  {
+    "bodo": "गोजोन सान!",
+    "roman": "Gwjwn saan!",
+    "english": "Good day / afternoon!",
+    "hindi": "शुभ दोपहर!",
+    "category": "wishes"
+  },
+  {
+    "bodo": "गोजोन बेलासै!",
+    "roman": "Gwjwn belase!",
+    "english": "Good evening!",
+    "hindi": "शुभ संध्या!",
+    "category": "wishes"
+  },
+  {
+    "bodo": "गोजोन हर!",
+    "roman": "Gwjwn hor!",
+    "english": "Good night!",
+    "hindi": "शुभ रात्रि!",
+    "category": "wishes"
+  },
+  {
+    "bodo": "गोजोन्थों / साबायखर",
+    "roman": "Gwjwnthwng / Sabai-khor",
+    "english": "Thank you",
+    "hindi": "धन्यवाद",
+    "category": "polite"
+  },
+  {
+    "bodo": "थाबाय दे!",
+    "roman": "Thabai de!",
+    "english": "Goodbye! (See you!)",
+    "hindi": "अलविदा!",
+    "category": "farewell"
+  },
+  {
+    "bodo": "निमाहा बिनो थाबाय",
+    "roman": "Nimaha binw thabai",
+    "english": "I am sorry / Excuse me",
+    "hindi": "माफ़ कीजिये",
+    "category": "polite"
+  },
+  {
+    "bodo": "नोंनि न'आ बबेयाव?",
+    "roman": "Nwngni noa bwbeyao?",
+    "english": "Where is your house?",
+    "hindi": "तुम्हारा घर कहाँ है?",
+    "category": "conversation"
+  },
+  {
+    "bodo": "आं बर' राव रोंङा",
+    "roman": "Ang Boro rao rwnga",
+    "english": "I do not know Bodo language",
+    "hindi": "मुझे बोडो भाषा नहीं आती",
+    "category": "language"
+  },
+  {
+    "bodo": "आं बर' राव सोलोंदों",
+    "roman": "Ang Boro rao swlwngdwng",
+    "english": "I am learning Bodo language",
+    "hindi": "मैं बोडो भाषा सीख रहा हूँ",
+    "category": "language"
+  },
+  {
+    "bodo": "नों इंराजी राव बुंनो हागौना?",
+    "roman": "Nwng Ingazi rao bungnw hagwna?",
+    "english": "Can you speak English?",
+    "hindi": "क्या आप अंग्रेजी बोल सकते हैं?",
+    "category": "language"
+  },
+  {
+    "bodo": "जाख्रायनाय जाबायना?",
+    "roman": "Jakhrainai jabaina?",
+    "english": "Have you eaten?",
+    "hindi": "खाना खा लिया?",
+    "category": "food"
+  },
+  {
+    "bodo": "ओंखाम जाबाय",
+    "roman": "Wngkham jabai",
+    "english": "I have eaten rice/food",
+    "hindi": "खाना खा लिया",
+    "category": "food"
+  },
+  {
+    "bodo": "दै लुबैदों",
+    "roman": "Dwi lwbwidwng",
+    "english": "I am thirsty (need water)",
+    "hindi": "प्यास लगी है",
+    "category": "food"
+  },
+  {
+    "bodo": "बैसागुनि गोजोननाय जासिबाय",
+    "roman": "Bwisaguni gwjwnnai jasibai",
+    "english": "Happy Bwisagu festival!",
+    "hindi": "बैसागु की शुभकामनाएँ!",
+    "category": "festivals"
+  }
+]

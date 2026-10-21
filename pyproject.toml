@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bodonlp"
+version = "1.0.0"
+authors = [
+    { name = "Bhupesh Joshi", email = "bhupeshjoshi@example.com" }
+]
+maintainers = [
+    { name = "Bhupesh Joshi", email = "bhupeshjoshi@example.com" }
+]
+description = "Bodo (बड़ो / बर') Language Standard NLP Library: 36,000+ Dictionary Entries, Universal Translation, Classifier Engine, and Cultural Heritage"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["bodo", "brx", "nlp", "translation", "bodoland", "indian-languages", "tibeto-burman", "dictionary"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Text Processing :: Linguistic"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/bhupeshjoshi7/bodo"
+"Documentation" = "https://github.com/bhupeshjoshi7/bodo/blob/main/DOCUMENTATION.md"
+"GitHub" = "https://github.com/bhupeshjoshi7/bodo"
+"Bug Tracker" = "https://github.com/bhupeshjoshi7/bodo/issues"
+
+[project.scripts]
+bodonlp = "bodonlp.cli:main"
+bodo-cli = "bodonlp.cli:main"
