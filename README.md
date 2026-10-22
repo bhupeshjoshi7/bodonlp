@@ -1,7 +1,7 @@
-# bodonlp · बर' राव (Bodo Language Standard NLP Library)
+# bodo_language_library · बर' राव (Bodo Language Standard Library)
 
-[![PyPI version](https://img.shields.io/badge/pypi-v1.0.0-blue.svg)](https://pypi.org/project/bodonlp/)
-[![Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-brightgreen.svg)](https://pypi.org/project/bodonlp/)
+[![PyPI version](https://img.shields.io/badge/pypi-v1.0.0-blue.svg)](https://pypi.org/project/bodo_language_library/)
+[![Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-brightgreen.svg)](https://pypi.org/project/bodo_language_library/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Language](https://img.shields.io/badge/ISO%20639--3-brx-orange.svg)](https://iso639-3.sil.org/code/brx)
 [![FLORES-200 / NLLB](https://img.shields.io/badge/NLLB--200-brx__Deva-red.svg)](https://huggingface.co/facebook/nllb-200-distilled-600M)
@@ -27,8 +27,10 @@ A standard-library-style Python package and natural language processing toolkit 
 
 ### From PyPI:
 ```bash
-pip install bodonlp
+pip install bodo_language_library
 ```
+
+*(Note: You can also use `pip install bodonlp`).*
 
 ### From Source (Editable / Development Mode):
 ```bash
@@ -43,119 +45,119 @@ pip install -e .
 
 ### 1. Universal Translation
 ```python
-import bodonlp
+import bodo_language_library as bodo
 
 # Translate English to Bodo (Devanagari + Romanized)
-res = bodonlp.translate("Hello, how are you?")
+res = bodo.translate("Hello, how are you?")
 print(res.text)       # मा खबर?
 print(res.romanized)  # Ma khobor?
 print(res.method)     # rule_based
 
 # Translate Bodo to English
-res_en = bodonlp.translate("आं मोजाङैनो दं", target="en")
+res_en = bodo.translate("आं मोजाङैनो दं", target="en")
 print(res_en.text)    # I am fine
 
 # Translate between Hindi and Bodo
-res_hi = bodonlp.translate("नमस्ते, आप कैसे हैं?", target="brx")
+res_hi = bodo.translate("नमस्ते, आप कैसे हैं?", target="brx")
 print(res_hi.text)    # खुलुमबाय, मा खबर?
 ```
 
 ### 2. Multi-Way Dictionary Lookup
 ```python
-import bodonlp
+import bodo_language_library as bodo
 
 # Search by Bodo Devanagari
-w1 = bodonlp.lookup("खुलुमबाय")
+w1 = bodo.lookup("खुलुमबाय")
 print(w1.english)   # Hello / Greetings
 print(w1.roman)     # Khulumbai
 print(w1.pos)       # phrase
 
 # Search by English
-w2 = bodonlp.lookup("water")
+w2 = bodo.lookup("water")
 print(w2.bodo)      # दै
 print(w2.roman)     # Dwi
 
 # Search by Romanized Bodo
-w3 = bodonlp.lookup("bifang")
+w3 = bodo.lookup("bifang")
 print(w3.bodo)      # बिफां (tree)
 ```
 
 ### 3. Numeral System & Classifiers
 In Bodo, numerals attach to nouns using specific classifiers:
 ```python
-import bodonlp
+import bodo_language_library as bodo
 
 # Numbers to words
-print(bodonlp.num_to_words(42))                     # 'ब्रैजिनै'
-print(bodonlp.num_to_words(42, script="latin"))     # 'brwizinwi'
-print(bodonlp.numbers.to_devanagari_numerals(42))   # '४२'
+print(bodo.num_to_words(42))                     # 'ब्रैजिनै'
+print(bodo.num_to_words(42, script="latin"))     # 'brwizinwi'
+print(bodo.numbers.to_devanagari_numerals(42))   # '४२'
 
 # Classifiers:
 # 'सा-' (sa) for humans
-print(bodonlp.numbers.apply_classifier("mansi", 1))  # 'सासे मानसि' (one person)
-print(bodonlp.numbers.apply_classifier("mansi", 2))  # 'सानै मानसि' (two people)
+print(bodo.numbers.apply_classifier("mansi", 1))  # 'सासे मानसि' (one person)
+print(bodo.numbers.apply_classifier("mansi", 2))  # 'सानै मानसि' (two people)
 
 # 'मा-' (ma) for animals
-print(bodonlp.numbers.apply_classifier("swima", 1))  # 'मासे सैमा' (one dog)
-print(bodonlp.numbers.apply_classifier("swima", 2))  # 'मानै सैमा' (two dogs)
+print(bodo.numbers.apply_classifier("swima", 1))  # 'मासे सैमा' (one dog)
+print(bodo.numbers.apply_classifier("swima", 2))  # 'मानै सैमा' (two dogs)
 
 # 'दं-' (dwng) for trees, rivers, ropes
-print(bodonlp.numbers.apply_classifier("tree", 1))   # 'दंसे बिफां' (one tree)
+print(bodo.numbers.apply_classifier("tree", 1))   # 'दंसे बिफां' (one tree)
 ```
 
 ### 4. Grammar, Verb Conjugation & Syntax
 ```python
-import bodonlp
+import bodo_language_library as bodo
 
 # Verb Conjugation (root 'जा' - to eat)
-print(bodonlp.conjugate("जा", tense="present"))             # 'जायो' (eats)
-print(bodonlp.conjugate("जा", tense="present_continuous"))  # 'जादों' (is eating)
-print(bodonlp.conjugate("जा", tense="past"))                # 'जाबाय' (ate / has eaten)
-print(bodonlp.conjugate("जा", tense="future"))              # 'जागोन' (will eat)
-print(bodonlp.conjugate("जा", tense="present", negative=True)) # 'जाया' (does not eat)
+print(bodo.conjugate("जा", tense="present"))             # 'जायो' (eats)
+print(bodo.conjugate("जा", tense="present_continuous"))  # 'जादों' (is eating)
+print(bodo.conjugate("जा", tense="past"))                # 'जाबाय' (ate / has eaten)
+print(bodo.conjugate("जा", tense="future"))              # 'जागोन' (will eat)
+print(bodo.conjugate("जा", tense="present", negative=True)) # 'जाया' (does not eat)
 
 # Pluralization & Case Declension
-print(bodonlp.pluralize("मानसि"))                           # 'मानसिफोर' (people)
-print(bodonlp.decline_noun("मानसि", bodonlp.constants.Case.ACCUSATIVE))   # 'मानसिखौ' (the person [object])
-print(bodonlp.decline_noun("न'", bodonlp.constants.Case.LOCATIVE))       # 'न'आव' (in the house)
+print(bodo.pluralize("मानसि"))                           # 'मानसिफोर' (people)
+print(bodo.decline_noun("मानसि", bodo.constants.Case.ACCUSATIVE))   # 'मानसिखौ' (the person [object])
+print(bodo.decline_noun("न'", bodo.constants.Case.LOCATIVE))       # 'न'आव' (in the house)
 
 # Subject-Object-Verb (SOV) Sentence Construction
-sent = bodonlp.build_sentence(subject="आं", object_="ओंखाम", verb="जा", tense="present")
+sent = bodo.build_sentence(subject="आं", object_="ओंखाम", verb="जा", tense="present")
 print(sent)  # 'आं ओंखाम जायो।' (I eat rice.)
 ```
 
 ### 5. Phonetics & Transliteration
 ```python
-import bodonlp
+import bodo_language_library as bodo
 
 # Transliterate Romanized text to Devanagari
-dev = bodonlp.transliterate("Khulumbai, ang Boro rao swlwngdwng.", to_script="devanagari")
+dev = bodo.transliterate("Khulumbai, ang Boro rao swlwngdwng.", to_script="devanagari")
 print(dev)  # 'खुलुमबाय, आं बर' राव सोलोंदों।'
 
 # Transliterate Devanagari to Roman
-lat = bodonlp.transliterate("गोजोन फुंबिलि", to_script="latin")
+lat = bodo.transliterate("गोजोन फुंबिलि", to_script="latin")
 print(lat)  # 'gwjwn fungbili'
 ```
 
 ### 6. Proverbs (फाथास) & Riddles (खानथि)
 ```python
-import bodonlp
+import bodo_language_library as bodo
 
 # Traditional Proverb
-p = bodonlp.random_proverb()
+p = bodo.random_proverb()
 print(p['bodo'])     # गावनि आफाखौ मान हो, गुबुननि आफाखौबो मान हो।
 print(p['english'])  # Respect your own father, and respect others' father as well.
 print(p['meaning'])  # Treat all elders with equal reverence.
 
 # Traditional Riddle
-r = bodonlp.random_riddle()
+r = bodo.random_riddle()
 print(r['question']) # आं जाखाङोब्ला बारायलांगो, आं लोंखाङोब्ला थैयो। आं सोर?
 print(r['answer'])   # अर (Or / Fire)
 ```
 
 ### 7. Cultural Heritage
 ```python
-import bodonlp.culture as culture
+import bodo_language_library.culture as culture
 
 # Festivals
 for f in culture.list_festivals():
@@ -174,43 +176,43 @@ for clan in culture.list_clans():
 
 ## 💻 Command-Line Interface (CLI)
 
-The library ships with a full CLI tool `bodonlp` (or `bodo-cli`):
+The library provides the `bodo` (or `bodonlp`) command-line tool:
 
 ```bash
 # 1. Translate
-bodonlp translate "How are you?"
-bodonlp translate "आं मोजाङैनो दं" --target en
+bodo translate "How are you?"
+bodo translate "आं मोजाङैनो दं" --target en
 
 # 2. Dictionary Search
-bodonlp lookup "खुलुमबाय"
-bodonlp lookup "water"
-bodonlp search "dance"
+bodo lookup "खुलुमबाय"
+bodo lookup "water"
+bodo search "dance"
 
 # 3. Numbers & Classifiers
-bodonlp number 42
-bodonlp number 3 --classifier mansi
+bodo number 42
+bodo number 3 --classifier mansi
 
 # 4. Conjugation
-bodonlp conjugate "जा" --tense past
-bodonlp conjugate "थां" --tense future --negative
+bodo conjugate "जा" --tense past
+bodo conjugate "थां" --tense future --negative
 
 # 5. Culture & Heritage
-bodonlp culture --festivals
-bodonlp culture --instruments
-bodonlp culture --clans
+bodo culture --festivals
+bodo culture --instruments
+bodo culture --clans
 
 # 6. Proverbs & Riddles
-bodonlp proverb
-bodonlp riddle
+bodo proverb
+bodo riddle
 
 # 7. Voice Analysis & SSML
-bodonlp voice "Welcome to Bodoland"
+bodo voice "Welcome to Bodoland"
 
 # 8. Web Scraping Wikipedia
-bodonlp scrape --wiki "बैसागु"
+bodo scrape --wiki "बैसागु"
 
 # 9. Library Info
-bodonlp info
+bodo info
 ```
 
 ---
@@ -236,7 +238,7 @@ To build and publish this library to PyPI:
 
 2. **Build distribution archives:**
    ```bash
-   python -m build
+   python setup.py sdist bdist_wheel
    ```
 
 3. **Check distribution:**
@@ -256,9 +258,9 @@ To build and publish this library to PyPI:
 This library is licensed under the [MIT License](LICENSE).
 
 ```bibtex
-@software{bodonlp2026,
+@software{bodo_language_library2026,
   author = {Bhupesh Joshi},
-  title = {bodonlp: Bodo Language Standard NLP Library},
+  title = {bodo_language_library: Bodo Language Standard Library},
   year = {2026},
   url = {https://github.com/bhupeshjoshi7/bodo}
 }

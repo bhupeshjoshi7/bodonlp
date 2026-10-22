@@ -1,4 +1,4 @@
-# Bodo Language Library (`bodonlp`) — Technical & Linguistic Documentation
+# Bodo Language Library (`bodo_language_library`) — Technical & Linguistic Documentation
 
 ---
 
@@ -32,6 +32,7 @@ e:\AI\bodo\
 ├── LICENSE                      # MIT License
 ├── .gitignore                   # Version control exclusions
 │
+├── bodo_language_library/       # Primary package (import bodo_language_library)
 ├── bodonlp/                     # Core library package (import bodonlp)
 │   ├── __init__.py              # Unified library API, facade, and exports
 │   ├── constants.py             # ISO codes (brx), scripts, POS, tenses, classifiers, kinship, seasons, calendar
@@ -326,5 +327,5 @@ Located in `data_sources/`:
 
 Users worldwide will now be able to install and use the library with:
 ```bash
-pip install bodonlp
+pip install bodo_language_library
 ```

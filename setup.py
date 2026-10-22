@@ -8,13 +8,13 @@ if os.path.exists("README.md"):
         long_desc = fh.read()
 
 setup(
-    name="bodonlp",
+    name="bodo_language_library",
     version="1.0.0",
     author="Bhupesh Joshi",
     author_email="bhupeshjoshi@example.com",
     maintainer="Bhupesh Joshi",
     maintainer_email="bhupeshjoshi@example.com",
-    description="Bodo (बड़ो / बर') Language Standard NLP Library: 36,000+ Dictionary Entries, Universal Translation, Classifier Engine, and Cultural Heritage",
+    description="Bodo (बड़ो / बर') Language Standard Library: 36,000+ Dictionary Entries, Universal Translation, Classifier Engine, and Cultural Heritage",
     long_description=long_desc,
     long_description_content_type="text/markdown",
     url="https://github.com/bhupeshjoshi7/bodo",
@@ -30,8 +30,10 @@ setup(
     },
     entry_points={
         "console_scripts": [
+            "bodo = bodo_language_library.cli:main",
             "bodonlp = bodonlp.cli:main",
-            "bodo-cli = bodonlp.cli:main",
+            "bodo-cli = bodo_language_library.cli:main",
+            "bodo-language = bodo_language_library.cli:main",
         ],
     },
     classifiers=[
